@@ -1,19 +1,15 @@
 import { defineComponent, ref } from "vue";
+import { Bar } from "./views/Bar";
+import { Foot } from "./views/Foot";
 
 export const App = defineComponent({
     setup() {
-        const count = ref(0);
-        const onClick = () => {
-            count.value++;
-        }
+
         return () => <>
-            <div>
-                {count.value}
-            </div>
-            <div>
-                <button onClick={onClick}>添加</button>
-            </div>
-            </>
-       
+            <router-link to="/">Go to Home</router-link>
+            <router-link to="/about">Go to About</router-link>
+            <router-view></router-view>
+        </>
+
     }
 });
