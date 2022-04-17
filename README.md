@@ -12,3 +12,9 @@ pnpm  run build
 pnpm run preview
 
 ```
+
+# git 删除文件
+
+```
+git rm --cached dist
+```
